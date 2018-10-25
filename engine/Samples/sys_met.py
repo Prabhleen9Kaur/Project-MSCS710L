@@ -37,7 +37,7 @@ class sys_met():
   met["systemRam"] = SYSRAM
   met["processInfo"] = PROCINFO.Name
   met["GPUInfo"] = GPUINFO.Name
-  met["date and time"] = 
+  #met["date and time"] = 
   #print(met)
   #print(MEMU)
   #print('OS Name: {0}'.format(OSNAME))
