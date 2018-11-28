@@ -1,0 +1,14 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "System Metric App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Aishwarya , Prabhleen",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^3.0.10"
+  }
+}
