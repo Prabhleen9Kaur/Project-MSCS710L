@@ -1,7 +1,6 @@
 #fileName : db.py
 #author : Aishwarya Pagalla
 # last modified : 10/24/2018
-
 import pprint
 from sys_met import *
 from pymongo import MongoClient
