@@ -13,7 +13,8 @@ programming language : python
 '''
 class sys_met():
   met = {}
-  set = {}
+  sett = {}
+  inf = {}
   PID, PN, PE, PS = ([] for i in range(4))
   SYS = wmi.WMI()
   OSINFO = SYS.Win32_OperatingSYStem()[0]
@@ -24,11 +25,11 @@ class sys_met():
   OSNAME = OSINFO.Name
   OSVERSION = OSINFO.Version
   SYSRAM = float(OSINFO.TotalVisibleMemorySize) / 1048576  # KB to GB
-  met["OSName"] = OSNAME
-  met["OSVersion"] = OSVERSION
-  met["SystemRam"] = SYSRAM
-  met["ProcessInfo"] = PROCINFO.Name
-  met["GPUInfo"] = GPUINFO.Name
+  inf["OSName"] = OSNAME
+  inf["OSVersion"] = OSVERSION
+  inf["SystemRam"] = SYSRAM
+  inf["ProcessInfo"] = PROCINFO.Name
+  inf["GPUInfo"] = GPUINFO.Name
   for process in SYS.Win32_Process():
     PID.append(process.ProcessId)
     PN.append(process.Name)
@@ -36,11 +37,11 @@ class sys_met():
     PS.append(process.Status)
     met["ProcessID"] = PID
     met["ProcessName"] = PN
-    met["ExecutablePath"] = PE
-    met["Status"] = PS	
+    met["ProcessExePath"] = PE
+    met["ProcessStatus"] = PS	
     #print(PID, PN, PE, PS)
-  set["MemoryUsage"] = MEMU
-  set["ProcessorUsage"] = PROCU
+  sett["MemoryUsage"] = MEMU
+  sett["ProcessorUsage"] = PROCU
   print(set)
   
   
