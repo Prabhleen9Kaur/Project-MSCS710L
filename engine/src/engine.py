@@ -9,6 +9,7 @@ import json
 from sys_met import *
 import markdown
 app = Flask(__name__)
+
 CORS(app)
 
 @app.route("/processes")

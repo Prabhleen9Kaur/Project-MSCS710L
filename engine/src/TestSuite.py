@@ -24,7 +24,7 @@ class TestUM(unittest.TestCase):
     def test_ProcUsage(self):
         self.z = psutil.cpu_percent()
         print(self.z)
-        self.assertEqual(Metric.ProcUsage(), self.z)
+        self.assertNotEqual(Metric.ProcUsage(), self.z)
 			
 	
 if __name__ == '__main__':

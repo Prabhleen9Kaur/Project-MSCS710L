@@ -10,12 +10,19 @@ db = client.test_database
 db = client["metdb0"]
 collection = db.test_collection
 collection = db['metcollector']
-doc = sys_met.met
-		
-posts = db.posts
-post_id = posts.insert_one(doc).inserted_id
+doc1 = sys_met.met
+doc2 = sys_met.sett
+doc3 = sys_met.inf		
+postmet = db.postmet
+postsett = db.postsett
+postinf = db.postinf
+post_id = postmet.insert_one(doc1).inserted_id
+post_id = postsett.insert_one(doc2).inserted_id
+post_id = postinf.insert_one(doc3).inserted_id
 print(post_id)
 db.collection_names(include_system_collections=False)
-pprint.pprint(posts.find_one())
+pprint.pprint(postmet.find_one())
+pprint.pprint(postsett.find_one())
+pprint.pprint(postinf.find_one())
 
 

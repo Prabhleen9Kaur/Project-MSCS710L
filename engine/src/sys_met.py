@@ -42,6 +42,6 @@ class sys_met():
     #print(PID, PN, PE, PS)
   sett["MemoryUsage"] = MEMU
   sett["ProcessorUsage"] = PROCU
-  print(set)
+  #print(sett)
   
   
